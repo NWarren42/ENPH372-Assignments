@@ -285,3 +285,33 @@ W &= -800000 \frac{N}{m^2} \times 0.003 m^3 \nonumber \\
 W &= -2400 Nm
 \end{align}
 $$
+
+NOT SURE HOW TO DO HEAT CALCULATION SINCE NON-IDEAL
+
+### Process B
+
+Process B is a linear transition from point A to point B. The work done to expand this gas is given by the area under the line which can be calculated using the integral definition of work on a gas, or by simply using geometry.
+
+$$
+\begin{align}
+W &= -(A_{triangle} + A_{rectangle}) \nonumber \\
+W &= -(\frac{1}{2}(0.003 m^3)(700000 \frac{N}{m^2}) + (0.003 m^3)(100000 \frac{N}{m^2})) \nonumber \\
+W &= -1350 J
+\end{align}
+$$
+
+The work done is negative as the gas is expanding. 
+
+NOT SURE HOW TO DO HEAT HERE EITHER. CANT USE PV=NRT
+
+### Process C
+
+The pressure decreases with fixed volume for the first stage of this process. CANT CALCULATE HEAT WITHOUT HEAT CAPACITY. NON-IDEAL EITHER SO CANT USE PVNRT
+
+The work done in the second phase to expand the gas is given using the standard work formula.
+
+$$
+W = - P \Delta V = -100000 \frac{N}{m^2} \times 0.003 m^3 = 300 J
+$$
+
+## Question 5
