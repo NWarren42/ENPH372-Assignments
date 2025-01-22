@@ -61,6 +61,8 @@ The freezing of a seabed is actually possible to see under certain hyper-specifi
 
 See an article and video on brinicles [here](https://eartharchives.org/articles/brinicle-ice-finger-of-death-filmed-in-antarctic/index.html).
 
+<div style="page-break-after: always;"></div>
+
 ## Question 2
 
 ### Part 2.a
@@ -202,6 +204,8 @@ $$
 
 The hole is obviously quite small, which makes sense if we use our intuition for how long the tire stayed inflated.
 
+<div style="page-break-after: always;"></div>
+
 ## Question 3
 
 ### Part 3.a
@@ -256,6 +260,8 @@ Considering the fact that we determined that water has nine possible degrees of 
 
 The obviously begs the question then of where this energy is going? The answer to this question can be found in the fundamental differences between liquids and solids. For the ideal gas model, we assume zero interaction between the different gas particles and therefore all the energy must be contained within each individual molecule. For liquids however we know that this isn't true and that there are indeed intermolecular forces that play significant roles. These forces, particularly hydrogen bonding in water, are responsible for maintaining the liquid state and serve as an additional vice for energy storage in a liquid. Water’s strong hydrogen bonds, formed due to its abundance of hydrogen and oxygen atoms, require substantial energy to disrupt, contributing significantly to its high heat capacity
 
+<div style="page-break-after: always;"></div>
+
 ## Question 4
 
 The process $a$, $b$, and $c$ are shown for an unknown non-ideal gas below.
@@ -276,29 +282,37 @@ Once we have K, we can use the integral law of thermodynamics to determine the c
 
 $$
 \begin{align}
-\Delta U_{a-b} &= \int_{V_A}^{V_B} P(V) dV \nonumber \\
-         &= \int_{0.001}^{0.004} (25.3) (V^{-1.5}) dV \nonumber \\
-         &= 800 J
+\Delta U_{a-b} &= -\int_{V_A}^{V_B} P(V) dV \nonumber \\
+         &= -\int_{0.001}^{0.004} (25.3) (V^{-1.5}) dV \nonumber \\
+         &= -800 J \nonumber
 \end{align}
 $$
 
-Since energy is conserved in a PV diagram, the change in energy for energy process from point A to point B will therefore be constant at 800J.
+Since the change in thermal energy, is a conserved quantity regardless of the path taken between two events, we can use this value for $\Delta U$ across all processes outlined in the graph. energy is conserved in a PV diagram, the change in energy for energy process from point A to point B will therefore be constant at 800J.
 
 ### Process A
 
 For process A we note that the gas is originally expanded at constant pressure, then pressure increases at constant volume
 
-The work done in the first phase of process a is simply given by multiplying the change in volume by the pressure of the gas. In this case, the gas is expanding so the work done must be negative.
+The work done in the first phase of process A is simply given by multiplying the change in volume by the pressure of the gas, the standard equation for work done by an expanding gas. In this case, the gas is expanding so the work done must be negative.
 
 $$
 \begin{align}
 W &= - P \Delta V \nonumber \\
 W &= -800000 \frac{N}{m^2} \times 0.003 m^3 \nonumber \\
-W &= -2400 Nm
+W &= -2400 Nm \nonumber
 \end{align}
 $$
 
-Now that we know the work required for process A, we can calculate the heat transfer
+Since $\Delta U$ remains constant for all processes, we can now use the first law of thermodynamics to calculate the heat energy transfer of this process.
+
+$$
+\begin{align}
+Q_A &= \Delta U - W \nonumber \\
+  &= -800J - 2400J \nonumber \\
+  &= -3200J \nonumber
+\end{align}
+$$
 
 ### Process B
 
@@ -308,22 +322,139 @@ $$
 \begin{align}
 W &= -(A_{triangle} + A_{rectangle}) \nonumber \\
 W &= -(\frac{1}{2}(0.003 m^3)(700000 \frac{N}{m^2}) + (0.003 m^3)(100000 \frac{N}{m^2})) \nonumber \\
-W &= -1350 J
+W &= -1350 J \nonumber
 \end{align}
 $$
 
-The work done is negative as the gas is expanding.
+Similarly to process A, the work done is negative as the gas is expanding. With the same method from process A we can now calculate the heat lost in process B.
 
-NOT SURE HOW TO DO HEAT HERE EITHER. CANT USE PV=NRT
+$$
+\begin{align}
+Q_B &= -800J - 1350J \nonumber \\
+  &= -2150J \nonumber
+\end{align}
+$$
 
 ### Process C
-
-The pressure decreases with fixed volume for the first stage of this process. CANT CALCULATE HEAT WITHOUT HEAT CAPACITY. NON-IDEAL EITHER SO CANT USE PVNRT
-
-The work done in the second phase to expand the gas is given using the standard work formula.
+<div style="page-break-after: always;"></div>
+The pressure decreases with fixed volume for the first stage of this process. The work done in the second phase to expand the gas is given using the standard work formula.
 
 $$
-W = - P \Delta V = -100000 \frac{N}{m^2} \times 0.003 m^3 = 300 J
+W = - P \Delta V = -100000 \frac{N}{m^2} \times 0.003 m^3 = -300 J \nonumber
 $$
+
+Once again we see that we can use the same method as before to determine the heat lost.
+
+$$
+\begin{align}
+Q_C &= -800J - 300J \nonumber \\
+  &= -1100J \nonumber
+\end{align}
+$$
+
+From these answers, we can draw the conclusion that for the most efficient transfer of heat out of a gas, the gas should be expanded at high pressures then drop the pressure. This makes for the greatest loss of thermal energy from the gas.
+
+<div style="page-break-after: always;"></div>
 
 ## Question 5
+
+Question 5 concerns the physical system shown below.
+
+![The setup for Q5](Q5Diagram.png)
+
+
+To analyze the system shown below, we first note that the pressure inside the chamber will be marginally higher than the pressure outside of it due to the force of gravity pulling the ball down. This can be represented by the equation below.
+
+$$
+P_i = P_0 + \frac{mg}{A}
+$$
+
+### Part A
+
+As a part of this question, we are told to assume that any compression is adiabatic. This makes sense as there is really no way the ball could ever be moving fast enough that the molecules can't move out of the way simply due to gravity.
+
+Since our compression is adiabatic we know that the product of the pressure and volume raised to the adiabatic index must remain constant.
+
+$$
+V^{\gamma} P = constant
+$$
+
+When the ball falls into the tube, it is displacing an amount of air greater than at rest who's volume is given by the area of the tube multiplied by the depth the ball has fallen, taking up as positive and down as negative. We can represent this as the following.
+
+$$
+V_f = V_i + A \Delta x
+$$
+
+Now taking advantage of the relation of pressure and volume for adiabatic processes, we can come up for a model for the pressure inside the container with respects to the displacement of the ball.
+
+$$
+\begin{align}
+P V^\gamma &= P_i V_i^\gamma \nonumber \\
+P (V_i + Ax)^\gamma &= (P_i + \frac{mg}{A}) V_i^\gamma \nonumber \\
+P &= (P_i + \frac{mg}{A}) \left(\frac{V_i}{V_i + Ax}\right) ^\gamma \nonumber
+\end{align}
+$$
+
+
+### Part B
+
+We now consider the situation where the ball is undergoing SHM due to the pressure increase of it falling into the chamber counteracting th gravitational force acting on the ball. To maintain these conditions indefinitely we need to assume the system is frictionless and there is no gas leakage around the ball.
+
+From our equation above for pressure, we can consider the inverse of the volume term and come up with an approximation that makes doing the math significantly easier for this system.
+
+$$
+\begin{align}
+\left(\frac{V_i}{V_i + Ax}\right) ^\gamma &= \left(\frac{V_i + Ax}{V_i}\right) ^{-\gamma} \nonumber \\
+&= \left(1 + \frac{Ax}{V_i}\right) ^{-\gamma} \nonumber \\
+&\approx 1 - \gamma \frac{Ax}{V_i} \nonumber
+\end{align}
+$$
+
+If we now consider the force on the ball caused by this pressure differential, we can come up with an equation for the net force on the object that is in a form that is common for a simple harmonic oscillator and will allow us to model the ball's motion.
+
+$$
+\begin{align}
+F &= (P - P_0)A \nonumber \\
+&= A[(P_0 + \frac{mg}{A})(1-\gamma \frac{Ax}{V_i}) - P_0] \nonumber \\
+&= A[- \frac{P_0 \gamma Ax}{V_i} + \frac{mg}{A}(1 - \gamma \frac{Ax}{V_i})] \nonumber \\
+&= mg - \left(\frac{mg \gamma A}{V_i} + \frac{P_0 \gamma A^2}{V_I}\right) x \nonumber \\
+\end{align}
+$$
+
+For a standard simple harmonic oscillator, this second term is commonly referred to as the restoring force, where the constant out front is denoted as k.
+
+$$
+k = \frac{mg \gamma A}{V_i} + \frac{P_0 \gamma A^2}{V_I}
+$$
+
+Now we can use the general form of a simple harmonic oscillator to determine the period of the oscillations of the ball in the tube.
+
+$$
+\begin{align}
+m \ddot x &= -kx \nonumber \\
+m \ddot x &= \left(\frac{mg \gamma A}{V_i} + \frac{P_0 \gamma A^2}{V_I}\right) x \nonumber \\
+\ddot x & = \left(\frac{g \gamma A}{V_i} + \frac{P_0 \gamma A^2}{m V_I}\right) x \nonumber \\
+\end{align}
+$$
+
+For a simple harmonic oscillator, the angular frequency is a very well defined quantity that can be calculated with the expression $\omega = \sqrt{\frac{k}{m}}$, and then we can calculate the period of the oscillations with the expression $\tau = \frac{2 \pi}{\omega}$. First lets calculate $\omega$.
+
+$$
+\begin{align}
+\omega &= \sqrt{\frac{k}{m}} \nonumber \\
+&= \sqrt{\frac{\frac{mg \gamma A}{V_i} + \frac{P_0 \gamma A^2}{V_I}}{m}} \nonumber \\
+&= \sqrt{\frac{\gamma A^2 (P_0 + \frac{mg}{A})}{m V_i}} \nonumber \\
+&= \sqrt{\frac{\gamma A^2 P_i}{m V_i}}
+\end{align}
+$$
+
+With this definition, we can now come up with an expression for the period of the ball's oscillations.
+
+$$
+\begin{align}
+\tau &= \frac{2 \pi}{\omega} \nonumber \\
+&= 2 \pi \sqrt{\frac{m V_i}{\gamma A^2 P_i}} \nonumber \\
+\end{align}
+$$
+
+And this is the final expression for the period of oscillation of the ball.
