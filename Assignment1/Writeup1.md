@@ -44,7 +44,7 @@ $$
 \rho_{15°C} &= \frac{\rho_{20°C}}{1 + \beta \Delta T} \nonumber \\
             &= \frac{0.7892}{1 + 0.00112 (15 - 20)} \nonumber \\
             &= 0.7936 \ g \ cm^{-3}\nonumber
-\end{align} 
+\end{align}
 $$
 
 Our assumption that the liquid should be more dense obviously was correct, and just like earlier, to have the bulb sink at 15°C, we should make it just ever so slightly more dense than the ethanol at 15°.
@@ -53,7 +53,7 @@ Our assumption that the liquid should be more dense obviously was correct, and j
 
 Water is abnormal in the fact that its thermal expansion coefficient changes with temperature, and actually ends up changing signs at 4°C. This means that the coefficient of expansion is positive for $T > 4°C$ and negative for $T < 4°C$. This phenomena though actually is essential for the survival of our lake ecosystems as it allows fish and plants to access liquid water and live beneath the frozen surface of a lake in colder climates.
 
-The reason this happens is that since the coefficient of water is negative below 4°C, colder water will actually start to float on top of warmer water. This means all the 4°C water sinks to the bottom of the lake, and all the water cold enough to freeze (<0°C) sits on top of the lake. If water continued to more dense as it fell below 0°C, all the cold water would sink to the bottom of the lake and the lake would freeze from the bottom up. This would be devastating to any ecosystems in the lake. 
+The reason this happens is that since the coefficient of water is negative below 4°C, colder water will actually start to float on top of warmer water. This means all the 4°C water sinks to the bottom of the lake, and all the water cold enough to freeze (<0°C) sits on top of the lake. If water continued to more dense as it fell below 0°C, all the cold water would sink to the bottom of the lake and the lake would freeze from the bottom up. This would be devastating to any ecosystems in the lake.
 
 The freezing of a seabed is actually possible to see under certain hyper-specific conditions in regions of the antarctic. Streams of extremely cold and salty water entering the ocean can grow tendrils of ice called brinicles which extend down to the floor of the ocean and can form ice on the sea floor. This occurs when the stream of water coming in contains a lot of salt, greatly increasing its density and making it sink in the surrounding less dense water. Although not possible in freshwater, these brinicles are a cool example of a cooler dense liquid sinking through the surrounding liquid.
 
@@ -170,7 +170,8 @@ $$
 N(t) = N(0)e^{\frac{-t}{\tau}}
 $$
 
-Then we can see that $e^C = N(0)$ and $\tau = \frac{1}{\lambda}$.
+Then we can see that $e^C = N(0)$ and $\tau = \frac{1}{\lambda}$. $\frac{1}{\tau}$ is evidently just
+equal to $\lambda = \frac{A}{2V} \sqrt{\frac{kT}{m}}$
 
 ### Part 2.d
 
@@ -184,10 +185,9 @@ Since we put our "flat percentage" at 80%, we care when the exponential term in 
 
 $$
 \begin{align}
-0.8 &= e^{\frac{-t}{\frac{A}{2V} \sqrt{\frac{kT}{m}}}} \nonumber \\
-\ln 0.8 &= \frac{-t}{\frac{A}{2V} \sqrt{\frac{kT}{m}}} \nonumber \\
-\ln 0.8 &= \frac{-2Vt}{A} \sqrt{\frac{m}{kT}}\nonumber \\
-A &= \frac{-2Vt}{\ln (0.8)} \sqrt{\frac{m}{kT}}\nonumber \\
+0.8 &= e^{-t\frac{A}{2V} \sqrt{\frac{kT}{m}}} \nonumber \\
+\ln 0.8 &= -t\frac{A}{2V} \sqrt{\frac{kT}{m}} \nonumber \\
+A &= \frac{-2V \ln (0.8)}{t} \sqrt{\frac{m}{kT}}\nonumber \\
 \end{align}
 $$
 
@@ -195,12 +195,12 @@ Now if we take $t = 1hr = 3600s$, and $m = 28.02 \frac{g}{mol}$ (the atomic mass
 
 $$
 \begin{align}
-A &= \frac{-2 (1 \times 10^{-3} m^3) (3600s)}{\ln (0.8)} \sqrt{\frac{(28.02 \times 10^{-3} \frac{kg}{mol})/(6.022 \times 10^{23} \frac{molecules}{mol})}{(1.38 \times 10^{-23} \frac{J}{K}) 300K}}\nonumber \\
-A &= 0.108 m^2 \nonumber
+A &= \frac{-2 (1 \times 10^{-3} m^3) \ln (0.8)}{3600s} \sqrt{\frac{(28.02 \times 10^{-3} \frac{kg}{mol})/(6.022 \times 10^{23} \frac{molecules}{mol})}{(1.38 \times 10^{-23} \frac{J}{K}) 300K}}\nonumber \\
+A &= 4.16 \times 10^{-10} m^2 = 4.16 \times 10^{-4} mm^2\nonumber
 \end{align}
 $$
 
-THIS SEEMS HIGH. DOUBLE CHECK.
+The hole is obviously quite small, which makes sense if we use our intuition for how long the tire stayed inflated.
 
 ## Question 3
 
@@ -268,9 +268,21 @@ $$
 \begin{align}
 K &= \frac{P}{V^{-1.5}} \nonumber \\
 K &= \frac{800000 \frac{N}{m^2}}{0.001^{-1.5} m^3} \nonumber \\
-K &= 25.3 Nm^5
+K &= 25.3 Nm^5 \nonumber
 \end{align}
 $$
+
+Once we have K, we can use the integral law of thermodynamics to determine the change in energy between points A and B in the process.
+
+$$
+\begin{align}
+\Delta U_{a-b} &= \int_{V_A}^{V_B} P(V) dV \nonumber \\
+         &= \int_{0.001}^{0.004} (25.3) (V^{-1.5}) dV \nonumber \\
+         &= 800 J
+\end{align}
+$$
+
+Since energy is conserved in a PV diagram, the change in energy for energy process from point A to point B will therefore be constant at 800J.
 
 ### Process A
 
@@ -286,7 +298,7 @@ W &= -2400 Nm
 \end{align}
 $$
 
-NOT SURE HOW TO DO HEAT CALCULATION SINCE NON-IDEAL
+Now that we know the work required for process A, we can calculate the heat transfer
 
 ### Process B
 
@@ -300,7 +312,7 @@ W &= -1350 J
 \end{align}
 $$
 
-The work done is negative as the gas is expanding. 
+The work done is negative as the gas is expanding.
 
 NOT SURE HOW TO DO HEAT HERE EITHER. CANT USE PV=NRT
 
